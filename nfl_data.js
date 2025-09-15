@@ -30,7 +30,7 @@ async function fetchData(endpoint, params = {}) {
 
 async function getGameData() {
     const gameData = await fetchData("/games", { date: "2025-09-15" });
-    const item = gameData.response?.[0];
+    const item = gameData.response?.[1];
     if (!item) throw new Error(`No game found for date.`);
 
     const gameInfo = {
